@@ -1,0 +1,5 @@
+code/node_modules
+code/dist
+code/.tmp
+code/.sass-cache
+code/bower_components

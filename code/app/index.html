@@ -18,17 +18,43 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="testApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <md-button class="md-primary">Click me</md-button>
-<md-button class="md-accent">or maybe me</md-button>
-<md-button class="md-warn">Careful</md-button>
 
 
-   
+  <body layout="row" ng-app="testApp" class="icondemoFontIconsWithLigatures" ng-cloak>
+
+
+    <div  layout="column" layout-fill>
+      <md-toolbar class="md-warn">
+        <div class="md-toolbar-tools container" >
+          <span>SoccJS</span>
+          <!-- fill up the space between left and right area -->
+          <span flex></span>
+          <md-button>about</md-button>
+          <md-button>study</md-button>
+          <md-button>project</md-button>
+        </div>
+      </md-toolbar>
+       
+      <md-content class="container" layout="column" flex="100" class="boxWithHeight">
+          <section flex="30">
+            <md-button > Flat Button </md-button>
+            <md-button href="http://google.com"> Flat link </md-button>
+            <md-button class="md-test-100"> Raised Button </md-button>
+            <md-button ng-disabled="true"> Disabled Button </md-button>
+            <md-button>
+          </section>
+
+          <section flex>flex</section>
+      </md-content>
+    </div>
+
+    
+  </body>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
 
    
 

@@ -16,6 +16,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+
     <!-- endbuild -->
   </head>
 
@@ -23,7 +24,7 @@
   <body layout="row" ng-app="portfolio" class="icondemoFontIconsWithLigatures" ng-cloak>
 
 
-    <div ng-controller="sideController" layout="column" layout-fill layout-align="center center">
+    <div ng-controller="SidebarController as SidebarVm" layout="column" layout-fill layout-align="center center">
       
           
       <md-toolbar md-whiteframe="3">
@@ -34,7 +35,7 @@
           <md-button >about</md-button>
           <md-button>study</md-button>
           <md-button>project</md-button>
-          <md-icon md-font-library="material-icons" ng-click="toggleLeft()">menu</md-icon>
+          <md-icon md-font-library="material-icons" ng-click="SidebarVm.toggleLeft()">menu</md-icon>
         </div>
       </md-toolbar>
          
@@ -46,38 +47,11 @@
 
       <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left"  >
         <md-toolbar class="md-theme-indigo" layout="row">
-          <h1 class="md-toolbar-tools">Sidenav Left</h1>
-          <span flex>
-          <md-menu>
-            <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
-              <md-icon md-menu-origin class="material-icons">phone</md-icon>
-            </md-button>
-            <md-menu-content width="4">
-              <md-menu-item>
-                <md-button ng-click="ctrl.redial($event)">
-                  <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
-                  Redial
-                </md-button>
-              </md-menu-item>
-              <md-menu-item>
-                <md-button disabled="disabled" ng-click="ctrl.checkVoicemail()">
-                  <md-icon md-svg-icon="call:voicemail"></md-icon>
-                  Check voicemail
-                </md-button>
-              </md-menu-item>
-              <md-menu-divider></md-menu-divider>
-              <md-menu-item>
-                <md-button ng-click="ctrl.toggleNotifications()">
-                  <md-icon md-svg-icon="social:notifications-{{ctrl.notificationsEnabled ? 'off' : 'on'}}"></md-icon>
-                  {{ctrl.notificationsEnabled ? 'Disable' : 'Enable' }} notifications
-                </md-button>
-              </md-menu-item>
-            </md-menu-content>
-          </md-menu> 
+          <h1 class="md-toolbar-tools">SoccJS</h1>
         </md-toolbar>
         
-        <md-content class="md-padding" ng-controller="LeftCtrl">
-          <md-button ng-click="close()" class="md-primary" hide-gt-md>
+        <md-content class="md-padding">
+          <md-button ng-click="SidebarVm.close()" class="md-primary" hide-gt-md>
               Close Sidenav Left
           </md-button>
           <p hide-md show-gt-md>
@@ -85,25 +59,13 @@
               narrow your display.
           </p>
           <p> 
-            The "right" sideNav is open = {{isOpen()}} 
+            The "right" sideNav is open = {{SidebarVm.isOpen()}} 
           </p>
         </md-content>
-        
       </md-sidenav>
 
-      <!-- <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
-        <md-toolbar class="md-theme-light">
-          <h1 class="md-toolbar-tools">Sidenav Right</h1>
-        </md-toolbar>
-        <md-content ng-controller="RightCtrl" class="md-padding">
-          <md-button ng-click="close()" class="md-primary">
-            Close Sidenav Right
-          </md-button>
-        </md-content>
-      </md-sidenav> -->
 
-
-      </div>
+    </div>
 
   
 
@@ -143,14 +105,13 @@ Use of this source code is governed by an MIT-style license that can be in found
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/common/common.module.js"></script>
-        <script src="scripts/common/common.router.js"></script>
-        <script src="scripts/common/common.controller.js"></script>
-        <script src="scripts/common/config/common.config.palette.js"></script>
-        <!-- endbuild -->
-</body>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/common/common.module.js"></script>
+    <script src="scripts/common/common.router.js"></script>
+    <script src="scripts/common/common.sidebarcontroller.js"></script>
+    <script src="scripts/common/config/common.config.palette.js"></script>
+    <!-- endbuild -->
+  
+  </body>
 </html>

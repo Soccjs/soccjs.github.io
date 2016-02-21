@@ -8,12 +8,10 @@
     $stateProvider
       .state('/',{
         url:'/',
-        templateUrl: 'scripts/views/main.html'
+        templateUrl: 'scripts/main/main.html'
       })
       .state('/about', {
-      templateUrl: 'scripts/views/about.html',
-      controller: 'AboutCtrl',
-      controllerAs: 'about'
+        templateUrl: 'scripts/main/about.html',
       });
   }
 

@@ -38,9 +38,94 @@ section {
   background-color: #dedede;
 }
 
+
+
+.intro {
+  position:absolute;
+  left:30px;
+  top:20px;
+  width : 600px;
+  height: 20px;  
+}
+
+.demo {
+  position:relative;  
+  width : 600px;
+  height : 300px; 
+  background-color: #aeaeae; 
+  margin-top:40px;
+  margin-left:0px;
+}
+
+.demo a {
+  text-decoration: none !important;
+  color: white;
+  height:100%;
+  width:100%;
+}
+
+.demo a.visited {
+  color:white;
+}
+
+.demo #content {
+  background-color: rgb(255, 244, 220);
+  padding:30px;
+  font-weight:600;
+  border: 1px solid #aeaeae;
+  border-top:none;
+}
 .container{
   background-color: transparent;
   width:70%;
   margin: 0 auto;
   padding: 0;
+}
+
+.Capitalize .md-button{
+  text-transform: capitalize;
+  height: 100%;
+  margin: 0 auto;
+}
+.Capitalize md-icon{
+  display: none;
+}
+
+md-toolbar:not(.md-menu-toolbar){
+  background-color: white;
+  color:rgba(139,195,74,0.7);
+}
+md-content.container{
+  background-color: transparent;
+}
+.main{
+  background-color: red;
+}
+
+@media screen and (max-width: 1000px) {
+  .right-sidebar{
+    display: none;
+  }
+  .container{
+    background-color: transparent;
+    width:100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .Capitalize{
+    padding-left: 10px;
+  }
+  .Capitalize .md-button{
+    display: none;
+  }
+  .Capitalize md-icon{
+    display: block;
+    font-size: 36px;
+    width: 40px;
+    height: 80%;
+    vertical-align: center;
+    background-color: #ccc;
+  }
+
+
 }

@@ -1,23 +1,32 @@
 (function () {
   'use strict';
 
-  function MainRouter($stateProvider, $urlRouterProvider) {
+  function CommonRouter($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/');
   
     $stateProvider
-      .state('/',{
+      .state('main',{
         url:'/',
-        templateUrl: 'scripts/main/main.html'
+        templateUrl: 'scripts/common/common.html'
       })
-      .state('/about', {
-        templateUrl: 'scripts/main/about.html',
+      .state('about', {
+        url:'/about',
+        templateUrl: 'scripts/menu/about/about.html',
+      })
+      .state('project', {
+        url:'/project',
+        templateUrl: 'scripts/menu/project/project.html',
+      })
+      .state('study', {
+        url:'/study',
+        templateUrl: 'scripts/menu/study/study.html',
       });
   }
 
 
-  MainRouter.$inject = ['$stateProvider','$urlRouterProvider'];
+  CommonRouter.$inject = ['$stateProvider','$urlRouterProvider'];
 
   angular.module('portfolio.common.router', [])
-    .config(MainRouter);
+    .config(CommonRouter);
 })();

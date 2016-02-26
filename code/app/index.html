@@ -21,7 +21,7 @@
   </head>
 
 
-  <body layout="row" ng-app="portfolio" class="icondemoFontIconsWithLigatures" ng-cloak>
+  <body layout="row" ng-app="portfolio" ng-cloak>
 
 
     <div ng-controller="SidebarController as SidebarVm" layout="column" layout-fill layout-align="center center">
@@ -29,18 +29,18 @@
           
       <md-toolbar md-whiteframe="3">
         <div class="md-toolbar-tools container Capitalize"  >
-          <span>SoccJS</span>
+          <span ui-sref="main">SoccJS</span>
           <!-- fill up the space between left and right area -->
           <span flex></span>
-          <md-button >about</md-button>
-          <md-button>study</md-button>
-          <md-button>project</md-button>
+          <md-button ui-sref="about">about</md-button>
+          <md-button ui-sref="study">study</md-button>
+          <md-button ui-sref="project">project</md-button>
           <md-icon md-font-library="material-icons" ng-click="SidebarVm.toggleLeft()">menu</md-icon>
         </div>
       </md-toolbar>
          
       <md-content  class="container" layout="column" flex="100" class="boxWithHeight">
-        <div ui-view></div>
+        <div ui-view class="main-layout"></div>
        
       </md-content>
       

@@ -17,25 +17,25 @@
                       // .then(function(){
                       //   $log.debug("close LEFT is done");
                       // });
- 	};
+ 	  };
 
 
- 	function toggleLeft(){
+   	function toggleLeft(){
     	$mdSidenav('left').toggle();
-                      // .then(function(){
-                      //     $log.debug("toggle left is done");
-                      // });
+                    // .then(function(){
+                        //     $log.debug("toggle left is done");
+                        // });
   	};
     function toggleRight(){
     	$mdSidenav('right').toggle();
-                        // .then(function(){
-                        //   $log.debug("toggle RIGHT is done");
-                        // });
+                          // .then(function(){
+                          //   $log.debug("toggle RIGHT is done");
+                          // });
   	};
 
   	function isOpen(){ 
   		return false;
-	};
+  	};
 
 	$mdComponentRegistry
 		.when('right')

@@ -30,7 +30,10 @@ body {
 .Capitalize md-icon{
   display: none;
 }
-
+.Capitalize span{
+  cursor: pointer;
+  color: rgba(139, 195, 74, 0.9);  
+}
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -60,6 +63,9 @@ md-toolbar:not(.md-menu-toolbar){
 }
 md-content.container{
   background-color: transparent;
+}
+a{
+  cursor: pointer;
 }
 .main-layout{
   margin: 25px 10px;

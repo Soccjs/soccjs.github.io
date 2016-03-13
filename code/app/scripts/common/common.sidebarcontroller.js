@@ -11,7 +11,7 @@
     vm.toggleLeft = toggleLeft;
     vm.toggleRight = toggleRight;
 
-
+    vm.menus = ['about', 'study', 'project'];
     function close(){
     	$mdSidenav('left').close();
                       // .then(function(){

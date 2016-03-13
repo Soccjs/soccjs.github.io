@@ -32,9 +32,9 @@
           <span ui-sref="main">SoccJS</span>
           <!-- fill up the space between left and right area -->
           <span flex></span>
-          <md-button ui-sref="about">about</md-button>
-          <md-button ui-sref="study">study</md-button>
-          <md-button ui-sref="project">project</md-button>
+          
+          <md-button ng-repeat="menu in SidebarVm.menus" ui-sref={{menu}}>{{menu}}</md-button>
+          
           <md-icon md-font-library="material-icons" ng-click="SidebarVm.toggleLeft()">menu</md-icon>
         </div>
       </md-toolbar>
@@ -52,10 +52,11 @@
         
         <md-content class="md-padding">
           
-          <p hide-md show-gt-md>
-              This sidenav is locked open on your device. To go back to the default behavior,
-              narrow your display.
-          </p>
+          <md-list>
+            <md-list-item class="md-1-line" ng-repeat="menu in SidebarVm.menus">
+                <a ui-sref={{menu}} ng-click="SidebarVm.close()">{{menu}}</a>
+            </md-list-item>
+          </md-list>
 
           <md-button ng-click="SidebarVm.close()" class="md-primary pull-right" hide-gt-md>
               Close
